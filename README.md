@@ -14,8 +14,8 @@ To install TGI first install the docker
 curl command to use in servers
 http_proxy=http://172.16.205.246:9090 \
 https_proxy=http://172.16.205.246:9090 \
-curl localhost:8080/v1/chat/completions \
-    --noproxy localhost \
+curl http://172.16.34.235:8080/v1/chat/completions \
+    --noproxy 172.16.34.235 \
     -X POST \
     -d '{
   "model": "tgi",
