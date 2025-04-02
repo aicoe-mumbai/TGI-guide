@@ -33,3 +33,21 @@ curl http://172.16.34.235:8080/v1/chat/completions \
   "max_tokens": 1500
 }' \
     -H 'Content-Type: application/json'
+
+
+
+**Testing**
+curl http://localhost:8080/v1/chat/completions \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "tgi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you explain how deep learning models, such as transformers, can be applied to biological data?"
+      }
+    ],
+    "max_tokens": 1500,
+    "stream": true
+  }'
