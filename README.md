@@ -6,11 +6,11 @@ To install TGI first install the docker
      - For Manual installation use tgi.tar file to load using
          ``` docker load -i tgi.tar ```
     - after manual pulling or to start cloud pulling of docker image use
-        docker run --dns=8.8.8.8 --gpus all --shm-size 1g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -v /absolute/path/to/volume:/data ghcr.io/huggingface/text-generation-inference:2.4.0 --model-id meta-llama/Llama-3.2-11B-Vision --sharded false --num-shard 1 --max-batch-prefill-tokens 512 --max-batch-total-tokens 1024 --max-input-length 512 --max-total-tokens 1024
+        docker run --dns=8.8.8.8 --gpus all --shm-size 1g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -v /absolute/path/to/volume:/data ghcr.io/huggingface/text-generation-inference:2.4.0 --model-id meta-llama/Llama-3.2-11B-Vision --sharded false --num-shard 1 --max-batch-prefill-tokens 512 --max-batch-total-tokens 1024 --max-input-length 512 --max-total-tokens 1024
 
-3. sudo docker run --gpus all --shm-size 8g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -e http_proxy=http://172.16.205.246:9090 -e https_proxy=http://172.16.205.246:9090 -v /absolute/path/to/volume:/data ghcr.io/huggingface/text-generation-inference:2.4.0 --model-id google/gemma-2-9b-it --sharded false --max-batch-prefill-tokens 2048 --max-batch-total-tokens 8192 --max-input-length 2048 --max-total-tokens 8192
+3. sudo docker run --gpus all --shm-size 8g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -e http_proxy=http://172.16.205.246:9090 -e https_proxy=http://172.16.205.246:9090 -v /absolute/path/to/volume:/data ghcr.io/huggingface/text-generation-inference:2.4.0 --model-id google/gemma-2-9b-it --sharded false --max-batch-prefill-tokens 2048 --max-batch-total-tokens 8192 --max-input-length 2048 --max-total-tokens 8192
 
-docker run --dns=8.8.8.8 --gpus all --shm-size 30g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -v ~/.cache/huggingface:/data  ghcr.io/huggingface/text-generation-inference:latest --model-id Qwen/
+docker run --dns=8.8.8.8 --gpus all --shm-size 30g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -v ~/.cache/huggingface:/data  ghcr.io/huggingface/text-generation-inference:latest --model-id Qwen/
 Qwen3-Coder-30B-A3B-Instruct-FP8 --sharded false --num-shard 1 --max-batch-prefill-tokens 128000 --max-batch-total-tokens 13
 1072 --max-input-length 128000 --max-total-tokens 131072
 
