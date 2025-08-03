@@ -10,6 +10,9 @@ To install TGI first install the docker
 
 3. sudo docker run --gpus all --shm-size 8g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -e http_proxy=http://172.16.205.246:9090 -e https_proxy=http://172.16.205.246:9090 -v /absolute/path/to/volume:/data ghcr.io/huggingface/text-generation-inference:2.4.0 --model-id google/gemma-2-9b-it --sharded false --max-batch-prefill-tokens 2048 --max-batch-total-tokens 8192 --max-input-length 2048 --max-total-tokens 8192
 
+docker run --dns=8.8.8.8 --gpus all --shm-size 30g -p 8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -v ~/.cache/huggingface:/data  ghcr.io/huggingface/text-generation-inference:latest --model-id Qwen/
+Qwen3-Coder-30B-A3B-Instruct-FP8 --sharded false --num-shard 1 --max-batch-prefill-tokens 128000 --max-batch-total-tokens 13
+1072 --max-input-length 128000 --max-total-tokens 131072
 
 curl command to use in servers
 http_proxy=http://172.16.205.246:9090 \
