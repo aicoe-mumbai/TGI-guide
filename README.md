@@ -1,7 +1,7 @@
 # TGI-guide
 To install TGI first install the docker
 docker run --dns=8.8.8.8 --gpus all --shm-size 1g -p 8081:80 \
-  -e HUGGING_FACE_HUB_TOKEN=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 \
+  -e HUGGING_FACE_HUB_TOKEN=hug_hf_iFfBZnguFMsGYFtQHBZHqUhtFuSbmIYTzO*donotchangeascopy \
   -v /absolute/path/to/volume:/data \
   ghcr.io/huggingface/text-generation-inference:3.3.4 \
   --model-id meta-llama/Llama-3.2-1B-Instruct \
